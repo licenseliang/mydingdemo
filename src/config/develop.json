@@ -1,8 +1,0 @@
-{ 
-    "DINTALK_API": true, 
-    "corpId": "ding78ec64c1c3a39e30",
-    "AUTH_URL": "http://116.62.180.21:30001/",
-    "APP_URL": { "url": "http://172.16.132.222:3000/" },
-    "API_URL": " 你的Api后台服务资源url " ,
-    "MOCK_URL": "http://116.62.180.21:30003/" 
-}
