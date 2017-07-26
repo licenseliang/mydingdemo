@@ -31,7 +31,7 @@ class Home extends Component {
                 <NavBar
                     iconName=""
                     mode="light">
-                    菜单
+                    钉钉审单
                 </NavBar>
 
                 {/*中间嵌套的页面*/}
@@ -43,7 +43,6 @@ class Home extends Component {
     }
 
     componentDidMount() {
-    alert("test");
         dd.biz.navigation.setTitle({ title:'Home' });
         Control.go(this.state.menu[0].path, );
     }
