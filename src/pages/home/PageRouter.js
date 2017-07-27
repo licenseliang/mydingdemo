@@ -11,7 +11,7 @@ export default {
             <Route index component={Page} path= '/home' >
             </Route>
             <Route component={nav} path= '/nav' />
-            <Route component={entry} path='/entry' />
+            <Route component={entry} path='/entry/:formId' />
             <Route component={display} path='/display' />
         </div>)
 };

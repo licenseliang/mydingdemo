@@ -1,6 +1,7 @@
 /* eslint no-dupe-keys: 0, no-mixed-operators: 0 */
 import { ListView } from 'antd-mobile';
 require("./nav.less")
+import { Control, Route } from 'react-keeper';
 
 function MyBody(props) {
   return (
@@ -13,16 +14,19 @@ function MyBody(props) {
 
 const data = [
   {
+    formId: 1,
     img: 'https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png',
     title: 'Meet hotel',
     des: '不是所有的兼职汪都需要风吹日晒',
   },
   {
+    formId: 3,
     img: 'https://zos.alipayobjects.com/rmsportal/XmwCzSeJiqpkuMB.png',
     title: 'McDonald\'s invites you',
     des: '不是所有的兼职汪都需要风吹日晒',
   },
   {
+    formId: 4,
     img: 'https://zos.alipayobjects.com/rmsportal/hfVtzEhPzTUewPm.png',
     title: 'Eat the week',
     des: '不是所有的兼职汪都需要风吹日晒',
@@ -73,7 +77,15 @@ class nav extends React.Component {
       dataSource: dataSource.cloneWithRowsAndSections(this.dataBlob, this.sectionIDs, this.rowIDs),
       isLoading: true,
     };
+
+    //this.gotoPage = this.gotoPage.bind(this);
+    
   }
+
+  gotoPage = function(event, formId) {
+    console.log("formId=" + formId);
+    Control.go("/entry/" + formId,);
+  };
 
   componentDidMount() {
     // you can scroll to the specified position
@@ -134,7 +146,7 @@ class nav extends React.Component {
       const obj = data[index--];
       return (
         <div key={rowID} className="row">
-          <div style={{ display: '-webkit-box', display: 'flex', padding: '0.3rem 0' }}>
+          <div style={{ display: '-webkit-box', display: 'flex', padding: '0.3rem 0' }} onClick={(ev, arg1) => {this.gotoPage(ev, obj.formId)}} >
             <img style={{ height: '1.58rem', marginRight: '0.3rem' }} src={obj.img} alt="icon" />
             <div className="row-text">{obj.des}</div>
             
