@@ -23,14 +23,13 @@ class entry extends React.Component {
 	}
 
 	render() {
-		alert(this.props.params.formId);
 		return (
 		
 		  <div style={{ padding: '0.3rem 0',margin: '0 0 3rem 0' }}>
 		    <WingBlank><PlaceHolder /></WingBlank>
 
 		    <WhiteSpace size="lg" />
-		    <WingBlank size="md"><PlaceHolder /></WingBlank>
+		    <WingBlank size="md"><PlaceHolder />{this.props.params.formId}</WingBlank>
 
 		    <WhiteSpace size="lg" />
 		    <WingBlank size="sm"><PlaceHolder /></WingBlank>

@@ -2,6 +2,7 @@
 import { ListView } from 'antd-mobile';
 require("./nav.less")
 import { Control, Route } from 'react-keeper';
+import logic from './PageLogic';
 
 function MyBody(props) {
   return (

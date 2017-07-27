@@ -1,6 +1,6 @@
 require('./PageHome.less');
 import logic from './PageLogic';
-import { Control, Route } from 'react-keeper';
+import { Control } from 'react-keeper';
 import { Component, LogicRender } from 'refast';
 
 import TabBar, { activeTabbar } from 'components/card-tabbar';
