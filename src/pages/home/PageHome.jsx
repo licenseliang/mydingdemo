@@ -44,7 +44,6 @@ class Home extends Component {
 
     componentDidMount() {
         dd.biz.navigation.setTitle({ title:'Home' });
-        Control.go(this.state.menu[0].path, );
     }
 
 }

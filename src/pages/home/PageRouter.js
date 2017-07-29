@@ -9,9 +9,10 @@ export default {
     route: () => (
         <div>
             <Route index component={Page} path= '/home' >
+            	<Route index component={nav} path= '/nav' />
+                
+                <Route component={display} path='/display' />
             </Route>
-            <Route component={nav} path= '/nav' />
             <Route component={entry} path='/entry/:formId' />
-            <Route component={display} path='/display' />
         </div>)
 };
