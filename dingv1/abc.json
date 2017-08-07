@@ -1,0 +1,22 @@
+{
+    "name": "dingv1",
+    "options": {
+        "template": "C:\\Users\\Administrator\\.nowa-gui\\template\\dingyou-dingtalk-mobile-v_1",
+        "npm": "http://registry.npm.taobao.org",
+        
+        "vars": {  "ENV": "develop"  }, 
+        "buildvars": {  "ENV": [ "test" ] }, 
+        
+        "alias": { 
+            "apis": "apis",
+            "assets": "assets",
+            "config": "config",
+            "image": "assets/image",
+            "icon": "assets/icon",
+            "components": "components",
+            "dings": "dings",
+            "pages": "pages",
+            "utils": "utils"
+        }
+    }
+}

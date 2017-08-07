@@ -1,0 +1,32 @@
+{
+  "name": "dingtest",
+  "options": {
+    "template": "C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.nowa-gui\\\\\\\\template\\\\\\\\dingyou-dingtalk-mobile-v_3",
+    "npm": "http://registry.npm.taobao.org",
+    "vars": {
+      "ENV": "develop"
+    },
+    "buildvars": {
+      "ENV": [
+        "test"
+      ]
+    },
+    "alias": {
+      "apis": "apis",
+      "assets": "assets",
+      "config": "config",
+      "image": "assets/img",
+      "icon": "assets/icon",
+      "components": "components",
+      "dings": "dings",
+      "pages": "pages",
+      "utils": "utils"
+    },
+    "src": "src",
+    "port": "3000",
+    "entry": "app/app.js",
+    "lazyload": true,
+    "open": false,
+    "https": false
+  }
+}

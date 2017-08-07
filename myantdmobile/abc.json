@@ -1,0 +1,10 @@
+{
+  "name": "myantdmobile",
+  "options": {
+    "type": "antdmobile",
+    "template": "C:\\Users\\Administrator\\.nowa-gui\\template\\nowa-template-antdmobile-v_1",
+    "npm": "http://registry.npm.taobao.org",
+    "entry": "index.jsx",
+    "port": "8000"
+  }
+}

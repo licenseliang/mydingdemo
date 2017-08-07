@@ -1,7 +1,19 @@
 /* eslint-disable */
 'use strict';
 
-module.exports = (config) => {
+module.exports = (config, webpack) => {
+    config.entry.vendor = [
+    'react',
+    'react-dom',
+    'rc-form',
+    'antd-mobile',
+    'react-keeper',
+    'react-router'
+    ];
+
+  config.plugins.push(
+    new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js')
+  );
     config.resolve.extensions = ['', '.web.js', '.jsx', '.js', '.json'];
     config.module.loaders = config.module.loaders.filter((n) => !/\.svg/.test(n.test));
     config.module.loaders.forEach((n) => {
@@ -15,4 +27,5 @@ module.exports = (config) => {
         test: /.svg$/,
         loader: 'svg-sprite-loader',
     });
+
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+require('react');
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from 'react-keeper'
 
