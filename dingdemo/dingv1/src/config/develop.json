@@ -1,5 +1,5 @@
 { 
-    "DINTALK_API": true, 
+    "DINTALK_API": false, 
     "CORP_ID": "ding78ec64c1c3a39e30",
     "AUTH_URL": "http://172.16.132.222:8080/",
     "APP_URL": { "url": "http://172.16.132.222:3000/" },

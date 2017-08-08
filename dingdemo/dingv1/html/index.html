@@ -17,13 +17,13 @@
         <!-- 外部和钉钉客户端的脚本加载 -->
         <script src="https://as.alipayobjects.com/g/component/??react/15.3.2/react.min.js,react/15.3.2/react-dom.min.js"></script>
         <script src="//g.alicdn.com/dingding/open-develop/1.1.1/dingtalk.js"></script>
-        <script src="//cdn.bootcss.com/react/0.14.7/react.min.js"></script>
     </head>
 
-    <body >
+    <body onload="createScript()">
         <div id="App"/>
+        hello world
         <script src="/vendor.js"></script>
-        <script src="/app.js"></script>
+        <!-- <script src="/app.js"></script> -->
 
         <!-- 消除移动浏览器的消除点击延时 -->
         <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>        
@@ -37,13 +37,13 @@
                 )
             }
 
-            /*function createScript(){
+            function createScript(){
                 
                 var oHead = document.getElementsByTagName('HEAD').item(0);
                 var oScript = document.createElement("script");
                 oScript.src= "/app.js";
                 oHead.appendChild(oScript);
-            }*/
+            }
         </script>
     </body>
 </html>

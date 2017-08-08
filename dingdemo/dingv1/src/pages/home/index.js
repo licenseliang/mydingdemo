@@ -7,7 +7,7 @@ import PageFeedBack from './pages/feedback';
 import PageOther from './pages/other';
 
 const PageHome= {
-    page : require('./PageHome') ,
+    page : require('./PageHome.jsx') ,
     route : ()=>{ return ( 
         <div>
             <Route index component={PageHome.page} path= '/home' >
