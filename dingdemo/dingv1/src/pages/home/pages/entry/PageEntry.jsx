@@ -3,18 +3,20 @@ import Icons from 'assets/icon';
 import logic from './PageLogic';
 import { Control } from 'react-keeper';
 import { Component, LogicRender } from 'no-flux';  
-import { WhiteSpace, WingBlank, Button, } from "antd-mobile"; 
+import { WhiteSpace, WingBlank, Flex, Button } from "antd-mobile"; 
+import Display from '../display/PageDisplay';
 
 // import name from 'components/my_components';
 
 class Entry extends Component {
     constructor(props) { super(props, logic);        
-        this.handleClick = this.handleClick.bind(this);   
+        this.handleSubmit = this.handleSubmit.bind(this);   
         this.handleChange = this.handleChange.bind(this);
+        this.state={name: "licenseliang", age: 10};
     }
 
-    handleClick( value ) {
-        this.execute( 'inputText', value )
+    handleSubmit() {
+        console.log(this.state);
     }
 
     handleChange() {
@@ -27,13 +29,13 @@ class Entry extends Component {
 
         return (
             <div className="entry">
-                <Button onClick = { this.handleClick } >
-                    { inputText }
-                </Button>
+                <Display value={this.state.name}>
+                </Display>
 
-                <Button onClick = { this.handleChange } >
-                    { buttonText }
-                </Button>
+                <Flex style={{ marginBottom: '0.16rem' }}>
+              <Button type="primary" inline style={{ marginRight: '0.08rem', width: '50%' }} onClick={this.handleSubmit}>提交</Button>
+              <Button type="primary" inline style={{ marginRight: '0.08rem', width: '50%' }}>取消</Button>
+            </Flex>
             </div>
         );
     }
@@ -43,7 +45,7 @@ class Entry extends Component {
 
     componentDidMount () {
         dd.biz.navigation.setTitle({ title:'导航栏标题' })
-        this.execute( 'printState' )
+
     }
 
 }

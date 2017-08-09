@@ -11,19 +11,10 @@ export default {
         }
     },
 
-    setButtonText({setState}, value) {
-        setState({ buttonText: value })
-    },
-
-    printState({ getState }) {
-        console.log( '当前状态:', getState() )
-    },
-
-    async inputText({setState, getState}) {
-        const p = { message: "随便输入写什么吧!", title: "提示", buttonLabels: ['确定', '取消'], };
-        const res = await Ding.sync( dd.device.notification.prompt, p );
-        setState({ inputText: res.value});
+    initData({setState}){
+        setState({name: "licenseliang", age: 10});
     }
+
 
     /*
     async getUser({ setState, Api, }) { // Api数据请求
