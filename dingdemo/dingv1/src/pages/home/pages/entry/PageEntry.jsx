@@ -4,7 +4,6 @@ import logic from './PageLogic';
 import { Control } from 'react-keeper';
 import { Component, LogicRender } from 'no-flux';  
 import { WhiteSpace, WingBlank, Flex, Button } from "antd-mobile"; 
-import Display from '../display/PageDisplay';
 
 // import name from 'components/my_components';
 
@@ -29,13 +28,12 @@ class Entry extends Component {
 
         return (
             <div className="entry">
-                <Display value={this.state.name}>
-                </Display>
+             
 
                 <Flex style={{ marginBottom: '0.16rem' }}>
-              <Button type="primary" inline style={{ marginRight: '0.08rem', width: '50%' }} onClick={this.handleSubmit}>提交</Button>
-              <Button type="primary" inline style={{ marginRight: '0.08rem', width: '50%' }}>取消</Button>
-            </Flex>
+                  <Button type="primary" inline style={{ marginRight: '0.08rem', width: '50%' }} onClick={this.handleSubmit}>提交</Button>
+                  <Button type="primary" inline style={{ marginRight: '0.08rem', width: '50%' }}>取消</Button>
+                </Flex>
             </div>
         );
     }

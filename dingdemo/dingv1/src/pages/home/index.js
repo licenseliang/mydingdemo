@@ -13,10 +13,11 @@ const PageHome= {
             <Route index component={PageHome.page} path= '/home' >
                 <PageNav.route />
                 <PageEntry.route />
-                <PageDisplay.route />
                 <PageFeedBack.route />
                 <PageOther.route /> 
             </Route>
+
+            <PageDisplay.route />
         </div>
     )}
 }
